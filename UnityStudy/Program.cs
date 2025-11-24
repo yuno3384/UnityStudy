@@ -58,9 +58,9 @@
              
             */
 
-            for (int i = 1; i < 7; i++)
+            for (int i = 1; i < 6; i++)
             {
-                for (int j = 7; j > i; j--)
+                for (int j = 6; j > i; j--)
                 {
                     Console.Write("*");
                 }
@@ -75,16 +75,37 @@
             {
                 if(i % 2 == 0)
                 {
-                    Console.WriteLine($"{i}는 짝수입니다");
+                    Console.WriteLine($"{i}는 짝수입니다.");
                 }
                 else if(i % 2 == 1){
                     Console.WriteLine($"{i}는 홀수입니다.");
                 }
             }
 
+            //오른쪽 정렬 별찍기
+            /*
+              * * * * * // 1 -> 5
+                * * * * // 2 -> 4 
+                  * * * // 3 -> 3
+                    * * // 4 -> 2
+                      * // 5 -> 1
+             */
+            for (int i = 1; i < 5; i++)
+            {
+                for (int j = 5 ; j > i; j--)
+                {
+                  Console.Write("*");
+                }
+                Console.WriteLine(" ");
+            }
+            /*
+                        *
+                      * *
+                    * * *
+                  * * * *
+                * * * * *
+             */
 
-
-            
 
         }
     }
