@@ -53,14 +53,14 @@
                 Console.WriteLine(num2);
             }
 
-            for(int n = 0; n < 9; n++)
+            for (int n = 0; n < 9; n++)
             {
                 Console.WriteLine(n);
                 for (int m = 0; m < 9; m++)
                 {
                     Console.WriteLine($"{n} {m}"); //CW : Console.WriteLine();
                 }
-               
+
             }
             // 안에 있는 반복문이 먼저 시작해서 > 그 안의 반복문이 그다음 시작됨 > 그리고 안의 반복문이 끝나고 나면 다시 바깥쪽 반복문의 조건변경이 진행
             // 항상 V자로 그린다. >선언 > (조건 > 실행 > 조건변경)(계속 반복)
