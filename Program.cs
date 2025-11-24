@@ -19,7 +19,7 @@
             //    Console.WriteLine("무한반복");
             //    a++; // 0 > 1 > 2 > 3 > 4 // while문을 쓸때는 반드시 조건변경이 중요하다
             //}
-            // 깃허브가 private이라면 > Change Visuality선택
+            // 깃허브가 private이라면 : Setting > Change Visuality선택
             /*
              정수변수 num을 1로 초기화한다.
              while문을 이용해 1부터 10까지 출력한다
