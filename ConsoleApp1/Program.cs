@@ -6,29 +6,35 @@
         {
             // 구구단 출력 프로그램
             // 앞자리는 2부터 뒷자리는 1부터
-            for (int i = 2; i < 10; i++)
+            //for (int i = 2; i < 10; i++)
+            //{
+            //    Console.WriteLine($"{i}단");
+            //    for (int j = 1; j < 10; j++)
+            //    {
+            //        Console.WriteLine($"{i}*{j} = {i * j}");
+            //    }
+            //}
+
+            // 아직도 중소기업에서는 별짓기가 나온다
+            
+
+            // 숙제 하나 더
+            // 1에서 10까지 출력하는데 
+            // 1은 홀수 입니다
+            // 2는 짝수 입니다
+            for (int i = 1; i > 11; i++)
             {
-                Console.WriteLine($"{i}단");
-                for (int j = 1; j < 10; j++)
+                if (i % 2 == 0)
                 {
-                    Console.WriteLine($"{i}*{j} = {i * j}");
+                   Console.WriteLine($"{i}는 짝수입니다");
+                }
+                else if (i % 2 == 1)
+                {
+                   Console.WriteLine($"{i}는 홀수입니다.");
                 }
             }
 
-            // 아직도 중소기업에서는 별짓기가 나온다
-            /*
-                *
-                * *
-                * * *
-                * * * *
-                * * * * *
-             
-             */
 
-            for(int i = 1; i < 6; i++)
-            {
-                Console.WriteLine("*");
-            }
         }
     }
 }
