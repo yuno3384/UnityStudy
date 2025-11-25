@@ -37,9 +37,9 @@
         // 이름은 Test이고
         // 매개변수는 int 형식으로 한개만 받는 걸로
         // 넘겨받은 매개변수의 값에 +1을 하여 반환하게 하세요
-        static void Test(int a)
+        static int Test(int a)
         {
-            Console.WriteLine(a++);
+            return a++;
         }
 
 
