@@ -37,11 +37,25 @@
         // 이름은 Test이고
         // 매개변수는 int 형식으로 한개만 받는 걸로
         // 넘겨받은 매개변수의 값에 +1을 하여 반환하게 하세요
-        static int Test(int a)
-        {
-            return a++;
+        static int Test(int a) // 왜 매개변수에 타입을 붙일까? > 컴퓨터가 어떤 타입인지 모르니까
+        {                      // 메모리 공간 > 한칸 한칸이 비트인데 > 메모리는 다 분산되어있다 > 그럼 크기를 모르면 자리를 어떻게 할 지 모르니까
+            Console.WriteLine($"before cal :{a}");
+            a++;
+            Console.WriteLine($"after cal :{a}");
+            return a;        // 잘못하면 덮어씌울 수도 있으니까 > 형식을 지정하여 주소를 피해가니까
         }
-
+        static int Test2(int a) // 왜 매개변수에 타입을 붙일까? > 컴퓨터가 어떤 타입인지 모르니까
+        {                      // 메모리 공간 > 한칸 한칸이 비트인데 > 메모리는 다 분산되어있다 > 그럼 크기를 모르면 자리를 어떻게 할 지 모르니까
+            Console.WriteLine($"a in :{a}");
+            
+            return ++a;       // 잘못하면 덮어씌울 수도 있으니까 > 형식을 지정하여 주소를 피해가니까
+        }
+        // 보통 프로그램 흐름이 시작은 Main임 > 호출이 안되면 건너뛰는 거임
+        // 그래서 변수 선언을 맨 위에서 하면 안됨 > 이것은 static때문
+        // main함수 바깥의 공간은 그냥 다른 공간 > 메소드의 공간이라 생각하고
+        // 함수 호출전에 매개변수가 먼저 선언되어야 오류가 안난다. / 매개변수에 꼭 변수가 필요한 건 아님, 리터럴이 들어가도 작동함
+        // 참고로 매개변수끼리 변수명을 맞출 필요는 없다
+        // int x = 99 > 함수 호출 > 값이 들어가서 > 가상의 변수로 연산 > 반환시킴
 
         static void Main(string[] args)
         {
@@ -64,8 +78,12 @@
             int y = 20;
             Output(x, y);
 
-            // 반환값 : void(반환값이 공허,아무것도 없음) /
-
+            
+            Console.WriteLine($"before Method : {x}");
+            int t = Test(x);
+            Console.WriteLine($"after Method : {t}");
+            int t2 = Test2(x);
+            Console.WriteLine($"after Method : {t2}");
 
             // 값형식, 참조형식
         }
