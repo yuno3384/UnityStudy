@@ -34,6 +34,15 @@
                 }
             }
 
+            // 누적합 알고리즘 > 1부터 n까지 더해주세요
+            int save = 0;
+            for (int i = 1; i < 11; i++)
+            {
+                
+                
+                save += i;
+            }
+            Console.WriteLine(save);
 
         }
     }

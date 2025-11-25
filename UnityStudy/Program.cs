@@ -36,6 +36,8 @@
                 * * *
                 * * * *
                 * * * * *
+                사고 과정) i 안의 j가 반복될 때 j가 *을 출력하는 방식
+                
              
             */
             //Console.Write("*");
@@ -90,13 +92,17 @@
                     * * // 4 -> 2
                       * // 5 -> 1
              */
-            for (int i = 1; i < 5; i++)
+            for (int i = 1; i < 6; i++)
             {
-                for (int j = 5 ; j > i; j--)
+                for (int j = 6 ; j > i; j--)
                 {
-                  Console.Write("*");
+                  Console.Write("q");
                 }
-                Console.WriteLine(" ");
+                for (int j = 6; j > i; j--)
+                {
+                    Console.Write("0");
+                }
+                Console.WriteLine("*");
             }
             /*
                         *
@@ -105,7 +111,8 @@
                   * * * *
                 * * * * *
              */
-
+            // 게임수학을 하면 좋다 > 다크쏘울에서 뒤에 몰래 가서 잡는 것 > 그것을 구현하려면 외접 내접을 해야...
+            // 방향벡터 A를 B로 갈때 d를 구할 때 > 노멀라이즈
 
         }
     }
