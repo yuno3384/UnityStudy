@@ -32,6 +32,15 @@
             //return a + b;
         }
 
+        static void Attack(int attackAmount)
+        {
+            if(attackAmount == 0)
+            {
+                return; // 이럴때 void에도 return을 써서 > 함수를 무효화
+                // monsterHp - attackAmount;
+            }
+        }
+
         // 함수를 만들어 주세요
         // 반환형식은 정수이고
         // 이름은 Test이고
@@ -48,6 +57,7 @@
         {                      // 메모리 공간 > 한칸 한칸이 비트인데 > 메모리는 다 분산되어있다 > 그럼 크기를 모르면 자리를 어떻게 할 지 모르니까
             Console.WriteLine($"a in :{a}");
             
+            // return a++; >> 이러면 a만 리턴되고 1이 더해지는 연산이 날아감 >> 주의!
             return ++a;       // 잘못하면 덮어씌울 수도 있으니까 > 형식을 지정하여 주소를 피해가니까
         }
         // 보통 프로그램 흐름이 시작은 Main임 > 호출이 안되면 건너뛰는 거임
@@ -80,11 +90,13 @@
 
             
             Console.WriteLine($"before Method : {x}");
-            int t = Test(x);
-            Console.WriteLine($"after Method : {t}");
+            int t = Test(x); // return값을 어떤 변수에 담음
+            Console.WriteLine($"after Method : {t}"); // 그것을 출력
+            Console.WriteLine(Test(x)); // 그냥 출력만
             int t2 = Test2(x);
             Console.WriteLine($"after Method : {t2}");
 
+            // ref stack heap도 배우면 좋지만... 일단은 넘어갑시다 > 메소드 만드는 법을 꼭 기억하라
             // 값형식, 참조형식
         }
     }
