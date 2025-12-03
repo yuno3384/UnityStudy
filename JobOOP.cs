@@ -2,7 +2,7 @@
 {
     namespace Program2
     {
-        class Program
+        class Program5
         {
             enum ClassType
             {
