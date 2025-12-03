@@ -91,7 +91,7 @@
 
 
                 Random random = new Random();
-                int monsterRand = random.Next(1, 3);
+                int monsterRand = random.Next(1, 4);
 
                 // 랜덤한 몬스터 생성
                 // Slime(20/2), Orc(40/4), Skeleton(30/3)
@@ -145,6 +145,7 @@
                         // 필드에서 싸울 몬스터
                         Monster monster;
                         CreateRandomMonster(out monster);
+                        Console.WriteLine($"{monster.name}이 나타났다. HP {monster.hp}, ATK {monster.atk}");
                     }
                 }
             }
