@@ -1,6 +1,6 @@
 ﻿namespace JobOOP
 {
-    namespace Program
+    namespace Program2
     {
         class Program
         {
@@ -18,12 +18,14 @@
                 public int atk;
             }
 
-            // 몬스터 구조체를 만들자
+            // 몬스터 구조체를 만들어주세요(hp, atk) 
 
-
-
-
-
+            struct Monster
+            {
+                public string name;
+                public int hp;
+                public int atk;
+            }
 
 
 
@@ -77,6 +79,48 @@
                         break;
                    
                 }
+
+            }
+
+            static void CreateRandomMonster(out Monster monster)
+            {
+
+                monster.name = "";
+                monster.hp = 0;
+                monster.atk = 0;
+
+
+                Random random = new Random();
+                int monsterRand = random.Next(1, 3);
+
+                // 랜덤한 몬스터 생성
+                // Slime(20/2), Orc(40/4), Skeleton(30/3)
+
+
+                switch (monsterRand)
+                {
+                    case 1:
+                        monster.name = "Slime";
+                        monster.hp = 20;
+                        monster.atk = 2;
+                        break;
+                    case 2:
+                        monster.name = "Orc";
+                        monster.hp = 40;
+                        monster.atk = 4;
+                        break;
+                    case 3:
+                        monster.name = "Skeleton";
+                        monster.hp = 30;
+                        monster.atk = 3;
+                        break;
+                    default:
+                        Console.WriteLine($"{monsterRand}에서 잘못된 값이 입력되었습니다.");
+                        break;
+                }
+
+
+
             }
 
             static void Main(string[] args)
@@ -94,11 +138,13 @@
                         //int hp;
                         //int atk;
 
-                        CreatePlayer(choice, out hp, out atk, out player);
+                        CreatePlayer(choice, /*out hp, out atk,*/ out player);
 
-                        Console.WriteLine($"HP {hp}, ATK {atk}");
+                        Console.WriteLine($"HP {player.hp}, ATK {player.atk}");
 
                         // 필드에서 싸울 몬스터
+                        Monster monster;
+                        CreateRandomMonster(out monster);
                     }
                 }
             }
