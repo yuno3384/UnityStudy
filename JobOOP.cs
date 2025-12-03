@@ -91,11 +91,13 @@
 
 
                 Random random = new Random();
+                // Random.Next(int min, int max) :minValue보다 크거나 같고 maxValue보다 작은 '부호 있는 32비트 정수(=int)'이므로
+                                               // 반환 값의 범위에는 minValue가 포함되지만 maxValue는 포함되지 않습니다.
+                                               // minValue가 maxValue와 같은 경우에는 minValue가 반환됩니다.
                 int monsterRand = random.Next(1, 4);
 
                 // 랜덤한 몬스터 생성
                 // Slime(20/2), Orc(40/4), Skeleton(30/3)
-
 
                 switch (monsterRand)
                 {
@@ -143,9 +145,16 @@
                         Console.WriteLine($"HP {player.hp}, ATK {player.atk}");
 
                         // 필드에서 싸울 몬스터
-                        Monster monster;
-                        CreateRandomMonster(out monster);
+                        //Monster monster;
+                        //CreateRandomMonster(out monster);
+                        CreateRandomMonster(out Monster monster); // 이때부터 몬스터가 나타날 수 있음 > 생성과 동시에 전달
                         Console.WriteLine($"{monster.name}이 나타났다. HP {monster.hp}, ATK {monster.atk}");
+                        // 공격을 넣을 거면 struct말고 class써라
+
+
+
+
+
                     }
                 }
             }
